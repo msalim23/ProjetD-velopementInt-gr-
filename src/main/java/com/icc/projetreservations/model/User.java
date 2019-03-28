@@ -1,12 +1,18 @@
 package com.icc.projetreservations.model;
 
+import javax.persistence.*;
+
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String login;
     private String password;
+    @ManyToOne
     private Role role;
-    private String firstnale;
+    private String firstname;
     private String lastname;
     private String email;
     private String langue;
@@ -43,12 +49,12 @@ public class User {
         this.role = role;
     }
 
-    public String getFirstnale() {
-        return firstnale;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstnale(String firstnale) {
-        this.firstnale = firstnale;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     public String getLastname() {
