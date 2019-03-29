@@ -40,4 +40,8 @@ public class UserService {
 
         return userToUpdate;
     }
+
+    public User loginUser(String login, String password){
+        return ur.getUserByLoginAndPassword(login,password);
+    }
 }
