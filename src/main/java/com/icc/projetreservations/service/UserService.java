@@ -44,4 +44,8 @@ public class UserService {
     public User loginUser(String login, String password){
         return ur.getUserByLoginAndPassword(login,password);
     }
+
+    public List<User> getUsersByRoleId(int id){
+        return ur.getUsersByRoleId(id);
+    }
 }

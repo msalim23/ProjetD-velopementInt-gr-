@@ -44,4 +44,9 @@ public class UserController {
         return us.getAllUser();
     }
 
+    @GetMapping(value = "/getByRoleId/{id}")
+    public List<User> getUsersByRole(@PathVariable int id){
+        return us.getUsersByRoleId(id);
+    }
+
 }
