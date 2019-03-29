@@ -7,6 +7,8 @@ import com.icc.projetreservations.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(value = "/user")
 public class UserController {
@@ -35,6 +37,11 @@ public class UserController {
         us.createUser(userToEdit);
 
         return userToEdit;
+    }
+
+    @GetMapping(value = "/getAll")
+    public List<User> getAllUsers (){
+        return us.getAllUser();
     }
 
 }
